@@ -16,7 +16,7 @@ public class UserController {
 			.getLogger(MainController.class);
 	
 	@RequestMapping(value = "/list")
-	public String users(Model model, HttpSession session, HttpServletRequest request){
+	public String users(){
 		
 		logger.info("----- Accessed users/list page -----");
 		return "users";
