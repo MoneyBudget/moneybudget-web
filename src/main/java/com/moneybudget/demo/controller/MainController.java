@@ -42,12 +42,4 @@ public class MainController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/users")
-	public String users(Model model, HttpSession session, HttpServletRequest request){
-		String name = "Noreen";
-		
-		logger.info("----- Accessed users page -----");
-		return "users";
-	}
-	
 }
