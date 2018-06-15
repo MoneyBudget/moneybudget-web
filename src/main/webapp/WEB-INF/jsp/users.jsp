@@ -1,2 +1,2 @@
 
-USER PAGE - user: ${name}
+USER PAGE - user: 

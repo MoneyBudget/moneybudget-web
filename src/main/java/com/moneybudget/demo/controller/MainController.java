@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +20,7 @@ public class MainController {
     private static final Logger logger = LoggerFactory
 			.getLogger(MainController.class);
  
-	/*Logger and response body testing
+	/*Logger and response body testing------
 	 
 	@RequestMapping(value= "/")
 	@ResponseBody
@@ -28,18 +31,21 @@ public class MainController {
 		return "Response Body Sample";
 	}*/
   
-	@RequestMapping(value= "/", method = RequestMethod.GET)
-	/*controller parameter testing
+	
+	/*controller parameter testing-------
 	 * public String home(ModelMap model,HttpServletRequest request, HttpServletResponse response,HttpSession session) {*/
-	public String home(ModelMap model) {
-		String name = "Noreen";
-		model.addAttribute("name", name);
+    
+    @RequestMapping(value= "/", method = RequestMethod.GET)
+	public String home() {
+	
 		logger.info("----- Accessed home page -----");
 		return "home";
 	}
 	
 	@RequestMapping(value = "/users")
-	public String users(){
+	public String users(Model model, HttpSession session, HttpServletRequest request){
+		String name = "Noreen";
+		
 		logger.info("----- Accessed users page -----");
 		return "users";
 	}
