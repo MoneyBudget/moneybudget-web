@@ -40,6 +40,12 @@
 			<scope>test</scope>
 		</dependency>
 		
+		<!--starter required for spring boot spring security-->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>  
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
 		<!-- needed to connect to mysql server -->
 		<dependency>
 			<groupId>mysql</groupId>

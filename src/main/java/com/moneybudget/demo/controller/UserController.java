@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 @RequestMapping(value = "/users")
 public class UserController {
@@ -21,4 +22,5 @@ public class UserController {
 		logger.info("----- Accessed users/list page -----");
 		return "users";
 	}
+	
 }
